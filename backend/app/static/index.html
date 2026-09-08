@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>AI Programming Tutor</title>
+
+    <link
+        rel="stylesheet"
+        href="/static/styles.css"
+    >
+</head>
+
+<body>
+
+    <main class="container">
+
+        <header>
+            <h1>AI Programming Tutor</h1>
+
+            <p>
+                Get progressive programming hints without
+                immediately revealing the solution.
+            </p>
+        </header>
+
+
+        <section class="controls">
+
+            <div class="control-group">
+
+                <label for="language">
+                    Programming Language
+                </label>
+
+                <select id="language">
+                    <option value="python">
+                        Python
+                    </option>
+
+                    <option value="java">
+                        Java
+                    </option>
+
+                    <option value="javascript">
+                        JavaScript
+                    </option>
+
+                    <option value="cpp">
+                        C++
+                    </option>
+
+                    <option value="csharp">
+                        C#
+                    </option>
+                </select>
+
+            </div>
+
+
+            <div class="control-group">
+
+                <label for="hintLevel">
+                    Hint Level
+                </label>
+
+                <select id="hintLevel">
+
+                    <option value="1">
+                        Level 1 — Subtle Nudge
+                    </option>
+
+                    <option value="2">
+                        Level 2 — Guided Help
+                    </option>
+
+                    <option value="3">
+                        Level 3 — Detailed Explanation
+                    </option>
+
+                </select>
+
+            </div>
+
+        </section>
+
+
+        <section class="editor-section">
+
+            <label for="code">
+                Your Code
+            </label>
+
+            <textarea
+                id="code"
+                spellcheck="false"
+                placeholder="Paste or write your code here..."
+            ></textarea>
+
+        </section>
+
+
+        <section class="buttons">
+
+            <button
+                id="hintButton"
+                class="primary-button"
+            >
+                Get Hint
+            </button>
+
+            <button
+                id="resetButton"
+                class="secondary-button"
+            >
+                Reset Session
+            </button>
+
+        </section>
+
+
+        <section
+            id="loading"
+            class="loading hidden"
+        >
+            Analysing your code...
+        </section>
+
+
+        <section
+            id="result"
+            class="result-card hidden"
+        >
+
+            <div class="result-header">
+
+                <h2>Your Hint</h2>
+
+                <span id="attemptBadge"></span>
+
+            </div>
+
+
+            <p
+                id="hintText"
+                class="hint-text"
+            ></p>
+
+
+            <div class="details">
+
+                <div class="detail">
+
+                    <span class="detail-label">
+                        Error Type
+                    </span>
+
+                    <span id="errorType"></span>
+
+                </div>
+
+
+                <div class="detail">
+
+                    <span class="detail-label">
+                        Concept
+                    </span>
+
+                    <span id="concept"></span>
+
+                </div>
+
+
+                <div class="detail">
+
+                    <span class="detail-label">
+                        Location
+                    </span>
+
+                    <span id="location"></span>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <section
+            id="errorBox"
+            class="error-box hidden"
+        ></section>
+
+    </main>
+
+
+    <script src="/static/app.js"></script>
+
+</body>
+
+</html>
